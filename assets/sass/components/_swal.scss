@@ -1,0 +1,45 @@
+
+// Sweet Alert
+.swal2-container {
+    .swal2-html-container {
+        margin: 2rem 0 0;
+    }
+    .swal2-popup {
+        max-width: 40rem;
+        padding: 3rem;
+        font-size: 1.6rem;
+    }
+    .swal2-icon {
+        margin: 0 auto;
+        font-size: 1rem;
+
+        &.swal2-success {
+            border-color: var(--color__primary);
+            color: var(--color__primary);
+
+            [class^=swal2-success-line] {
+                background-color: var(--color__primary);
+            }
+            .swal2-success-ring {
+                border-color: var(--color__primary);
+            }
+        }
+    }
+    .swal2-actions {
+        button {
+            font-size: 1.6rem;
+            outline: none;
+            
+            box-shadow: none;
+            &:focus {
+                box-shadow: none;
+            }
+            &.swal2-confirm {
+                background-color: var(--color__primary);
+            }
+        }
+    }
+    .swal2-timer-progress-bar {
+        background: var(--color__primary);
+    }
+}

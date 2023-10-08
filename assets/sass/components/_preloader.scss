@@ -1,0 +1,143 @@
+$border-color: var(--color__primary);
+$background-color: var(--color__white);
+$border-radius-big: 6px;
+$font-size-header: 16px;
+$car-color: var(--color__primary);
+$spin-deg: 36deg;
+
+@keyframes spin {
+     0% {
+         transform: translate(2px, 1px) rotate($spin-deg * 0);
+    }
+     10% {
+         transform: translate(-1px, -3px) rotate($spin-deg * 1);
+    }
+     20% {
+         transform: translate(-2px, 0px) rotate($spin-deg * 2);
+    }
+     30% {
+         transform: translate(1px, 2px) rotate($spin-deg * 3);
+    }
+     40% {
+         transform: translate(1px, -1px) rotate($spin-deg * 4);
+    }
+     50% {
+         transform: translate(-1px, 3px) rotate($spin-deg * 5);
+    }
+     60% {
+         transform: translate(-1px, 1px) rotate($spin-deg * 6);
+    }
+     70% {
+         transform: translate(3px, 1px) rotate($spin-deg * 7);
+    }
+     80% {
+         transform: translate(-2px, -1px) rotate($spin-deg * 8);
+    }
+     90% {
+         transform: translate(2px, 1px) rotate($spin-deg * 9);
+    }
+     100% {
+         transform: translate(1px, -2px) rotate($spin-deg * 10);
+    }
+}
+@keyframes speed {
+     0% {
+         transform: translate(2px, 1px) rotate(0deg);
+    }
+     10% {
+         transform: translate(-1px, -3px) rotate(-1deg);
+    }
+     20% {
+         transform: translate(-2px, 0px) rotate(1deg);
+    }
+     30% {
+         transform: translate(1px, 2px) rotate(0deg);
+    }
+     40% {
+         transform: translate(1px, -1px) rotate(1deg);
+    }
+     50% {
+         transform: translate(-1px, 3px) rotate(-1deg);
+    }
+     60% {
+         transform: translate(-1px, 1px) rotate(0deg);
+    }
+     70% {
+         transform: translate(3px, 1px) rotate(-1deg);
+    }
+     80% {
+         transform: translate(-2px, -1px) rotate(1deg);
+    }
+     90% {
+         transform: translate(2px, 1px) rotate(0deg);
+    }
+     100% {
+         transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+@keyframes strikes {
+     from {
+         left: 25px;
+    }
+     to {
+         left: -80px;
+         opacity: 0;
+    }
+}
+.preloader {
+    position: fixed;
+    inset: 0;
+    background-color: var(--color__white);
+    z-index: 9999;
+    @include flex-center;
+    flex-direction: column;
+    gap: 0 1rem;
+}
+
+.car {
+    position: relative;
+    width: 100px;
+    height: 55px;
+    .strike {
+        position: absolute;
+        width: 11px;
+        height: 1px;
+        background: $car-color;
+        animation: strikes .2s linear infinite;
+    }
+    .strike2 {
+        top: 11px;
+        animation-delay: .05s;
+    }
+    .strike3 {
+         top: 22px;
+         animation-delay: .1s;
+    }
+    .strike4 {
+         top: 33px;
+         animation-delay: .15s;
+    }
+    .strike5 {
+         top: 44px;
+         animation-delay: .2s;
+    }
+     &-detail {
+        position: absolute;
+        display: block;
+        animation: speed .3s linear infinite;
+         &.wheel {
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            top: 28px;
+            left: 13px;
+            border: 3px solid var(--color__white);
+            background: linear-gradient(45deg, transparent 45%, #000 46%, #000 54%, transparent 55%), linear-gradient(-45deg, transparent 45%, #000 46%, #000 54%, transparent 55%), linear-gradient(90deg, transparent 45%, #000 46%, #000 54%, transparent 55%), linear-gradient(0deg, transparent 45%, #000 46%, #000 54%, transparent 55%), radial-gradient(#000 29%, transparent 30%, transparent 50%, #000 51%), var(--color__white);
+            animation-name: spin;
+        }
+         &.wheel2 {
+            left: 63px;
+        }
+    }
+}
+

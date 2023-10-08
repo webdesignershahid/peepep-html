@@ -1,0 +1,19 @@
+.breadcrumb {
+    margin: 0;
+    @include lg-down {
+        justify-content: center;
+    }
+    li {
+        a {
+            color: var(--color__primary);
+        }
+        & + li {
+            &::before {
+                content: '/';
+                display: inline-block;
+                margin: 0 1rem;
+                color: var(--color__primary);
+            }
+        }
+    }
+}

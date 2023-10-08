@@ -1,0 +1,24 @@
+.container {
+    padding: 0 2rem; 
+    @include sm-up {
+        
+    }
+    @include md-up {
+        max-width: 765px;
+    }
+    @include lg-up {
+        max-width: 980px;
+    }
+    @include xl-up {
+        max-width: 1190px;
+    }
+    @include xxl-up {
+        max-width: 1380px;
+    }
+    @include xxxl-up {
+        max-width: 1400px;
+    }
+}
+.container-fluid {
+    padding: 0 2rem;
+}

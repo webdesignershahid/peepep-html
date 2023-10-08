@@ -1,0 +1,147 @@
+.text-theme {
+    color: var(--color__primary);
+}
+.bg-theme {
+    background-color: var(--color__primary);
+}
+.text-color-white {
+    color: var(--color__white);
+}
+.text-color-black {
+    color: var(--color__black);
+}
+.text-theme-black {
+    color: var(--color__theme__black);
+}
+.inline-flex-center {
+    @include inline-flex-center;
+}
+.link-disabled {
+    pointer-events: none;
+    user-select: none;
+    opacity: .5;
+    filter: grayscale(1);
+}
+
+@keyframes floatY {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-30px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+  
+.animate-floatY {
+    animation: floatY 4.5s ease-in-out infinite;
+}
+
+@keyframes floatX {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(-50px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+  
+.animate-floatX {
+    animation: floatX 5s ease-in-out infinite;
+}
+
+.pepcoin {
+    position: relative;
+    display: inline-block;
+    &::before {
+        content: '';
+        background: transparent url(../images/pepcoin.svg) no-repeat center center;
+        background-size: contain;
+        display: block;
+        width: var(--width);
+        height: var(--height);
+    }
+}
+.pepcurrency {
+    position: relative;
+    display: inline-block;
+    top: .2rem;
+    &::before {
+        content: '';
+        background: transparent url(../images/pep-currency.svg) no-repeat center left;
+        background-size: contain;
+        display: block;
+        width: var(--width);
+        height: var(--height);
+    }
+}
+
+.taka {
+    position: relative;
+    display: inline-block;
+    top: .2rem;
+    &::before {
+        content: url(../images/taka.svg);
+        display: inline-block;
+        width: 1.1rem;
+    }
+    &.white {
+        &::before {
+            content: url(../images/taka-white.svg);
+        }
+    }
+    &.blue {
+        &::before {
+            content: url(../images/taka-blue.svg);
+        }
+    }
+}
+
+.feedback {
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+    &.info {
+        background-color: rgba(#0dcaf0, .5);
+    }
+    &.danger {
+        background-color: rgba(#dc3545, .5);
+    }
+    &.success {
+        background-color: rgba(#198754, .8);
+        color: white;
+    }
+    &.warning {
+        background-color: rgba(#ffc107, .5);
+    }
+    &.dark {
+        background-color: var(--color__theme__black);
+        color: white;
+    }
+    &.primary {
+        background-color: var(--color__primary);
+        color: white;
+    }
+}
+
+.alert {
+    padding-left: 6rem;    
+    background-color: rgba(var(--bs-alert-bg), .5);
+    .icon {
+        @include flex-center;
+        width: 4.5rem;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--bs-alert-bg);
+    }
+}

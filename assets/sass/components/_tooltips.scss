@@ -1,0 +1,15 @@
+.tooltip {
+    --bs-tooltip-arrow-width : 1.3rem;
+    --bs-tooltip-arrow-height: .8rem;
+    .tooltip-arrow {
+        &::before {
+            --bs-tooltip-bg: var(--color__theme__black);
+        }
+    }
+    .tooltip-inner {
+        font-size: 1.4rem;
+        padding: 1.3rem 1.5rem;
+        background-color: var(--color__theme__black);
+        text-align: start;
+    }
+}

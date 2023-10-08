@@ -1,0 +1,54 @@
+html {
+	font-size: 58%;
+	-webkit-text-size-adjust: 100%;
+		
+	@include md-up {
+		font-size: 60%;
+	}
+	
+	@include lg-up {
+		font-size: 62.5%;
+	}
+}
+body {
+	font-size: 1.6rem;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Segoe UI';
+	overflow-x: hidden;
+}
+p { 
+	font-size: 1.6rem;
+	line-height: 1.5;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+ul, ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		font-size: 1.6rem;
+	}
+}
+a {
+	color: inherit;
+	text-decoration: none;
+	font-size: 1.6rem;
+	&:hover {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+@import 'headings';
+@import 'utilities';
+@import 'helpers';
+@import 'section-title';
+

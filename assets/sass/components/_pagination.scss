@@ -1,0 +1,40 @@
+.paging {
+    margin-top: 3rem;
+    @include md-down {
+        margin-top: 2rem;
+    }
+
+    .pagination {
+        gap: 0 1rem;
+        .page-link {
+            background: var(--color__white);
+            border: .1rem solid #CBCBCB;
+            margin: 0;
+            border-radius: .5rem;
+            @include transition;
+            font-size: 1.6rem;
+            display: inline-block;
+            min-width: 4rem;
+            padding: 1rem 2rem;
+            text-align: center;
+            color: var(--color__theme__black);
+
+            @include md-down {
+                font-size: 1.4rem;
+                padding: .8rem 1rem;
+            }
+            &:hover {
+                color: var(--color__white);
+                background-color: var(--color__primary);
+                border-color: var(--color__primary);
+            }
+        }
+        .active {
+            .page-link {
+                color: var(--color__white);
+                background-color: var(--color__primary);
+                border-color: var(--color__primary);
+            }
+        }
+    }
+}

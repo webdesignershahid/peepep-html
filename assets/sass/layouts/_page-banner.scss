@@ -1,0 +1,21 @@
+.page-banner {
+    margin-top: 8rem;
+    background-color: #EDEFF8;
+    padding: 1.7rem 0;
+
+    .container-xxl {
+        @include xxl-up {
+            max-width: 1400px;
+            padding: 0 2.5rem;
+        }
+    }
+
+    @include lg-up {
+        margin-top: 10rem;
+    }
+
+    .page-title {
+        font-size: 2.4rem;
+        font-weight: 600;
+    }
+}

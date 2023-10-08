@@ -1,0 +1,574 @@
+/* Hero Section Started
+=================================================== */
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 12rem 0 10rem;
+
+    @include md-up {
+        padding: 15rem 0 10rem;
+    }
+    @include lg-up {
+        padding: 16rem 0 10rem;
+    }
+    .hero-content {
+        @include md-down {
+            padding-top: 5rem;
+        }
+        @include lg-up {
+            padding-top: 2rem;
+        }
+        @include xxl-up {
+            padding-top: 5rem;
+        }
+    }
+    .hero-title {
+        font-weight: 800;
+        line-height: 1.12;
+        margin-bottom: 3rem;
+        font-size: 4rem;
+        display: none;
+        @include iPhone-down {
+            font-size: 3.5rem;
+        }
+        @include lg-up {
+            font-size: 5rem;
+        }
+        @include xl-up {
+            font-size: 6.5rem;
+        }
+
+        .line {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0.3rem;
+                right: 0;
+                bottom: .8rem;
+                height: 1.5rem;
+                background-color: var(--color__primary);
+                opacity: 0.5;
+                z-index: -1;
+                @include iPhone-down {
+                    height: 1.2rem;
+                }
+                @include lg-up {
+                    bottom: 1rem;
+                    height: 1.8rem;
+                }
+                @include xl-up {
+                    height: 2rem;
+                    bottom: 1.3rem;
+                }
+            }
+        }
+    }
+    .sub-title {
+        max-width: 42rem;
+    }
+    .bg-shape {
+        position: absolute;
+        top: -16rem;
+        right: -20rem;
+        z-index: -1;
+
+        @include xxl-up {
+            top: -12rem;
+            right: -18rem;
+        }
+
+        svg {
+            transition: all 0.2s;
+            @include dimension(48rem, 52rem);
+            @include sm-up {
+                @include dimension(70rem, 60rem);
+            }
+            @include md-up {
+                @include dimension(70rem, 60rem);
+            }
+            @include lg-up {
+                @include dimension(70rem, 65rem);
+            }
+            @include xxl-up {
+                @include dimension(85rem, 80rem);
+            }
+            @include xxxl-up {
+                @include dimension(100rem, 100rem);
+            }
+        }
+    }
+    .hero-image {
+
+        @include md-up {
+            margin-left: -3rem;
+            margin-right: -3rem;
+        }
+        @include xxl-up {
+            margin-left: -10rem;
+        }
+
+        @include xxxl-up {
+            margin-right: -20rem;
+            margin-left: -5rem;
+        }
+    }
+
+    .inventory-search {
+        background-color: var(--color__white);
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 .5rem 4rem rgba(#000000, .15);
+        margin-top: 2rem;
+        
+        @include md-up {
+            padding: 2.5rem 3rem 3rem;
+            margin-top: 6rem;
+        }
+        @include lg-up {
+            margin-top: 8rem;
+        }
+        @include xxl-up {
+            padding: 2.5rem 4rem 3rem;
+            max-width: 90%;
+            margin-top: 5rem;
+        }
+        form {
+
+            .row {
+                --bs-gutter-x: 2rem;
+                --bs-gutter-y: 2rem;
+            }
+            label {
+                font-weight: 600;
+                margin-bottom: .5rem;
+            }
+            button[type=submit] {
+                height: 5.5rem;
+                background-color: var(--color__dark__primary);
+                border: 0;
+                color: var(--color__white);
+                border-radius: .4rem;
+                padding: 0 3rem;
+                font-weight: 500;
+                width: 100%;
+                @include transition;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                &::before {
+                    content: "";
+                    display: block;
+                    left: 0;
+                    width: 100%;
+                    top: 0;
+                    height: 100%;
+                    background: linear-gradient(to right,transparent,#FFF);
+                    position: absolute;
+                    z-index: 3;
+                    transform: skewX(-15deg) translateX(-120%);
+                    -moz-transition: none;
+                    transition: none;
+                    opacity: .5;
+                }
+                &:hover {
+                    background-color: var(--color__primary);
+                    &::before {
+                        transform: skewX(-15deg) translateX(120%);
+                        transition: 800ms ease transform
+                    }
+                }
+            }
+            .select2-container {
+                width: 100% !important;
+            }
+        }
+    }
+}
+/* Hero Section Ended
+=================================================== */
+
+
+/* Unlock Inventory Section Started
+=================================================== */
+.unlockInventory {
+    padding: 2.5rem 0 10rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    @include lg-up {
+        padding: 5rem 0 3rem;
+    }
+    @include xl-up {
+        padding: 7rem 0 5rem;
+    }
+    @include xxl-up {
+        padding: 10rem 0 6rem;
+    }
+    .section-title {
+        margin-bottom: 4rem;
+        .title {
+            font-size: 4rem;
+            font-weight: 700;
+            @include iPhone-down {
+                font-size: 3.5rem;
+            }
+
+            @include lg-up {
+                font-size: 5rem;
+            }
+        }
+    }
+    .section-content {
+        p {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            max-width: 57rem;
+            line-height: 1.65;
+            @include lg-up {
+                font-size: 1.6rem;
+            }
+        } 
+    }
+    .section-image {
+        box-shadow: 0 .7rem 1.2rem 0 rgba(#000, 0.15);
+        border-radius: .8rem;
+        overflow: hidden;
+        position: relative;
+        @include md-up {
+            margin-right: -5rem;
+        }
+        @include lg-up {
+            right: -5rem;
+        }
+    }
+    .circle-shape {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+/* Unlock Inventory Section Ended
+=================================================== */
+
+/* Auction Calendar Started
+=================================================== */
+.auction-calendar {
+    padding: 2.5rem 0;
+    overflow: hidden;
+
+    @include lg-up {
+        padding: 5rem 0;
+    }
+    @include xl-up {
+        padding: 10rem 0;
+    }
+    .section-title {
+        margin-bottom: 4rem;
+
+        @include xl-up {
+            margin-bottom: 8rem;
+        }
+        .title {
+            font-size: 4rem;
+            font-weight: 700;
+            max-width: 45rem;
+            margin: 0 auto;
+            @include iPhone-down {
+                font-size: 3.5rem;
+            }
+            @include lg-up {
+                font-size: 5rem;
+            }
+        }
+    }
+    .row-wrapper {
+        z-index: 1;
+    }
+    .dots-shape {
+        margin-top: -9rem;
+        margin-left: -10rem;
+        z-index: -1;
+        position: absolute;
+        @include xl-down {
+            display: none;
+        }
+    }
+    .circle-shape {
+        position: absolute;
+        right: -5rem;
+        bottom: 10rem;
+        @include xl-down {
+            display: none;
+        }
+    }
+    .calander {
+        box-shadow: 0 .6rem 1rem rgba(#000000, .15);
+        border-radius: 1rem;
+        position: relative;
+        background-color: var(--color__white);
+        overflow: hidden;
+        
+        @include xl-up {
+            margin-right: -3rem;
+        }
+
+        .calander-header {
+            background-color: #009BDA;
+            padding: 3rem 2rem;
+            background-image: url(../images/calendar-heading-shape.png);
+            background-position: top left;
+            .title {
+                font-size: 3rem;
+                font-weight: 600;
+            }
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .table-wrapper {
+            padding: .5rem 1rem 5rem;
+            
+            @include sm-up {
+                padding: .5rem 2rem 5rem;
+            }
+            @include md-up {
+                padding: .5rem 3rem 5rem;
+            }
+            .item-image {
+                @include sm-up {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                }
+                p {
+                    flex: 1;
+                }
+            }
+            img {
+                border-radius: .5rem;
+            }
+            p {
+                font-size: 1.4rem;
+
+                @include lg-up {
+                    font-size: 1.6rem;
+                }
+            }
+            td {
+                padding: 1rem .5rem;
+                white-space: nowrap;
+                font-size: 1.4rem;
+
+                @include md-up {
+                    padding: 1.5rem 1rem;
+                }
+                @include lg-up {
+                    padding: 2rem 1rem;
+                }
+            }
+            th {
+                padding: 1rem .5rem;
+                font-size: 1.4rem;
+
+                @include md-up {
+                    padding: 1.5rem 1rem;
+                }
+                @include lg-up {
+                    padding: 2rem 1rem;
+                }
+            }
+        }
+    }
+    .section-content {
+        padding: 2rem 0;
+
+        .title {
+            font-weight: 700;
+            font-size: 3rem;
+
+            @include lg-up {
+                font-size: 4rem;
+            }
+        }
+
+        ul {
+            @media (min-width: 768px) and (max-width: 991px) {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 4rem;
+            }
+
+            li {
+                margin-top: 3rem;
+
+                @include md-up {
+                    margin-top: 6rem;
+                }
+
+                h6 {
+                    font-weight: 600;
+                    font-size: 2.4rem;
+                    margin-bottom: 1.5rem;                    
+                }
+                p {
+                    margin-bottom: 2rem;
+                    line-height: 1.65;
+                }
+            }
+        }
+    }
+
+    .row-wrapper {
+        .row {
+            @include lg-down {
+                --bs-gutter-y: 3rem;
+            }
+            @include lg-up {
+                --bs-gutter-x: 5rem;
+            }
+        }
+    }
+}
+/* Auction Calendar Started
+=================================================== */
+
+
+/* SignUp CTA Started
+=================================================== */
+.signup-cta {
+    padding: 7.5rem 0;
+    overflow: hidden;
+
+    @include sm-up {
+        padding: 17rem 0 10rem;
+    }
+    @include lg-up {
+        padding: 10rem 0;
+    }
+    @include xl-up {
+        padding: 10rem 0 15rem;
+    }
+    .cover-image {
+        position: relative;
+        max-width: 60rem;
+        margin: 0 auto;
+        @include sm-down {
+            padding: 5rem 0;
+        }
+        @include md-up {
+            max-width: 70rem;
+        }
+        @include lg-up {
+            margin: 0;
+            max-width: 100%;
+        }
+        .bg-shape {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            width: 45rem;
+            
+            @include sm-up {
+                width: 60rem;
+                left: 20%;
+            }
+            @include md-up {
+                width: 65rem;
+            }
+            @include lg-up {
+                left: 0;
+                transform: translateY(-50%) translateX(-15rem);
+                width: 60rem;
+            }
+            @include xl-up {
+                width: 65rem;
+            }
+            @include xxl-up {
+                width: 75rem;
+            }
+        }
+        .swiper {
+            @include md-down {
+                transform: scale(1.1);
+            }
+
+            @include xl-up {
+                top: 8rem;
+            }
+        }
+        .swiper-slide {
+            img {
+                opacity: 0;
+            }
+
+            &-active {
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .section-content {
+        border: .1rem solid #E2E8F0;
+        padding: 3rem;
+        border-radius: 1rem;
+        max-width: 65rem;
+        margin: 10rem auto 0;
+        background-color: var(--color__white);
+        position: relative;
+        z-index: 1;
+
+        @include sm-up {
+            padding: 5rem;
+        }
+        @include lg-up {
+            margin: 0;
+        }
+        @include xl-up {
+            padding: 7rem;
+        }
+        .title {
+            font-size: 4rem;
+            font-weight: 700;
+            @include iPhone-down {
+                font-size: 3.5rem;
+            }
+            @include lg-up {
+                font-size: 5rem;
+            }
+        }
+        ul {
+            li {
+                margin-top: 4rem;
+
+                h6 {
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                    font-family: 'Segoe UI';
+                }
+                p {
+                    line-height: 1.65;
+                    
+                    & + p {
+                        margin-bottom: 2rem;
+
+                    }
+                }
+            } 
+        }
+
+        .cta-button {
+            margin-top: 5rem;
+        }
+    }
+}
+/* SignUp CTA Started
+=================================================== */

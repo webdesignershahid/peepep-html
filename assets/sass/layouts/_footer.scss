@@ -1,0 +1,161 @@
+/* Footer Started
+=================================================== */
+footer {
+    background-color: #F8F8F8;
+
+    .footer-top {
+        padding: 10rem 0;
+        @include md-down {
+            padding: 6rem 0;
+        }
+        .grid-wrapper {
+            display: grid;
+            gap: 4rem;
+            @include sm-up {
+                grid-template-rows: auto;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                grid-template-areas: 
+                "siteBrand siteBrand SiteBrand SiteBrand" 
+                "widgetNavigation widgetNavigation widgetNavigation widgetNavigation" 
+                "secondaryMenu secondaryMenu secondaryMenu secondaryMenu";
+            }
+            @include md-up {
+                gap: 4rem 0;
+                grid-template-areas: 
+                "siteBrand siteBrand widgetNavigation widgetNavigation" 
+                "secondaryMenu secondaryMenu secondaryMenu secondaryMenu";
+            }
+            @include lg-up {
+                grid-template-areas: 
+                "siteBrand  widgetNavigation widgetNavigation widgetNavigation" 
+                "siteBrand secondaryMenu secondaryMenu secondaryMenu";
+            }
+        }
+        .footer-widget {
+            &.brand {
+                @include sm-up {
+                    grid-area: siteBrand;
+                }
+                .site-logo {
+                    img {
+                        @include xl-down {
+                            width: 10rem;
+
+                        }
+                    }
+                }
+                p {
+                    margin: 1.5rem 0;
+                    line-height: 1.8;
+                    @include md-up {
+                        margin: 3rem 0;
+                    }
+                }
+            }
+            .social-contacts {
+                a {
+                    @include transition;
+
+                    & + a {
+                        margin-left: 1.5rem;
+                    }
+                    &:hover {
+                        color: var(--color__primary);
+                    }
+                }
+            }
+            &.navigation {
+                @include sm-up {
+                    grid-area: widgetNavigation;
+                }
+                ul {
+                    @include lg-up {
+                        display: grid;
+                        gap: 2rem;
+                        grid-template-columns: repeat(2, minmax(0, 1fr));
+                    }
+                    @include xl-up {
+                        grid-template-columns: repeat(3, minmax(0, 1fr));
+                    }
+                    li {
+
+                        & + li {
+                            @include lg-down {
+                                margin: 2rem 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .info-widget {
+            display: flex;
+            gap: 0 2rem;
+
+            .icon {
+                padding: .5rem 0 0;
+                width: 5rem;
+                text-align: center;
+            }
+            .text {
+                line-height: 1.8;
+
+                a {
+                    @include transition;
+                    &:hover {
+                        color: var(--color__primary);
+                    }
+                }
+            }
+        }
+        .secondary-menu {            
+            .widget-title {
+                font-weight: 600;
+                font-size: 1.6rem;
+                margin-bottom: 2.5rem;
+                border-left: .5rem solid var(--color__primary);
+                padding-left: 1rem;
+
+            }
+
+            ul {
+                margin-left: 1.5rem;
+                li {
+
+                    & + li {
+                        margin-top: 1.3rem;
+                    }
+
+                    a {
+                        @include transition;
+
+                        &:hover {
+                            color: var(--color__primary);
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .secondary-menu-widget {
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        @include sm-up {
+            grid-area: secondaryMenu;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+    .footer-bottom {
+        padding: 2rem 0;
+        border-top: .1rem solid #E2E8F0;
+        p {
+            @include xl-down {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+/* Footer End
+=================================================== */
